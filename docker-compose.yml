@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  #MongoDB
+  mongo_db:
+    container_name: database_container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+    ports: 
+      - "27017:27017"
+
+volumes:
+  mongo_db: {}
